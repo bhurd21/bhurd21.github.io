@@ -1,0 +1,21 @@
+<header class="bg-white border-b border-gray-200">
+  <nav class="max-w-6xl mx-auto px-4 py-6">
+    <div class="flex justify-between items-center">
+      <a href="{{ '/' | relative_url }}" class="text-xl font-semibold text-gray-900 hover:text-gray-700">
+        {{ site.title }}
+      </a>
+
+      <ul class="flex space-x-8">
+        <li>
+          <a href="{{ '/' | relative_url }}" class="text-gray-600 hover:text-gray-900">Home</a>
+        </li>
+        <li>
+          <a href="{{ '/pages/projects' | relative_url }}" class="text-gray-600 hover:text-gray-900">Projects</a>
+        </li>
+        <li>
+          <a href="{{ '/pages/resume' | relative_url }}" class="text-gray-600 hover:text-gray-900">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

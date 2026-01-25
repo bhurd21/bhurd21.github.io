@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <style>
+    @media print {
+      @page {
+        size: letter;
+        margin: 0.5in;
+      }
+    }
+  </style>
+</head>
+<body class="bg-white">
+  <!-- Screen-only header with navigation and print button -->
+  <header class="print:hidden screen:block mb-4 p-4 bg-gray-50 border-b border-gray-200">
+    <nav class="max-w-4xl mx-auto flex justify-between items-center">
+      <a href="{{ '/' | relative_url }}" class="text-gray-600 hover:text-gray-900">← Back to Home</a>
+      <button onclick="window.print()" class="px-4 py-2 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors">
+        Print Resume
+      </button>
+    </nav>
+  </header>
+
+  <!-- Resume content with print-optimized classes -->
+  <div class="max-w-4xl mx-auto screen:p-8 print:p-0">
+    <div class="print:text-sm screen:text-base">
+      {{ content }}
+    </div>
+  </div>
+
+  <!-- Screen-only footer -->
+  <footer class="print:hidden screen:block mt-8 p-4 text-center text-gray-600 text-sm border-t border-gray-200">
+    <p>Last updated: {{ site.time | date: "%B %Y" }}</p>
+  </footer>
+</body>
+</html>

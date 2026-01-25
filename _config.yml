@@ -1,0 +1,43 @@
+# Site settings
+title: Your Name
+description: Personal website and portfolio
+url: ""  # Update this when you create your GitHub repo
+baseurl: ""  # Update for project sites (e.g., "/repo-name")
+
+# Build settings
+markdown: kramdown
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Plugins
+plugins:
+  - jekyll-postcss-v2
+
+# Exclude from build
+exclude:
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - README.md
+  - vendor/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: "pages"
+    values:
+      layout: "page"

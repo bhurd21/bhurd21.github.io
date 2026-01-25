@@ -1,0 +1,19 @@
+{
+  "name": "personal-site-static",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "scripts": {
+    "build": "jekyll build",
+    "serve": "jekyll serve --livereload"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.33",
+    "postcss-cli": "^11.0.0",
+    "autoprefixer": "^10.4.17",
+    "cssnano": "^6.0.3"
+  }
+}

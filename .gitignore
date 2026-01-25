@@ -1,0 +1,23 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Node
+node_modules/
+package-lock.json
+
+# Ruby
+vendor/
+.bundle/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
