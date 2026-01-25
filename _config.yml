@@ -1,8 +1,8 @@
 # Site settings
 title: Your Name
 description: Personal website and portfolio
-url: ""  # Update this when you create your GitHub repo
-baseurl: ""  # Update for project sites (e.g., "/repo-name")
+url: "https://bhurd21.github.io" # Update this when you create your GitHub repo
+baseurl: "" # Update for project sites (e.g., "/repo-name")
 
 # Build settings
 markdown: kramdown
