@@ -6,7 +6,7 @@ link: https://github.com/bhurd21/fantasy-kings
 date: 2024-03-20
 ---
 
-**Fantasy Kings** lets my friends and me experience sports betting without losing real money. Everyone gets a simulated **$10 weekly allowance** to bet on live NFL odds.
+**Fantasy Kings** lets my friends and me experience sports betting without losing real money. Everyone gets a simulated **$10 weekly allowance** to bet on live NFL and CFB odds.
 
 I built it as a greenfield Rails 8 project using Hotwire, Stimulus, and Kamal for deployment. A scheduled pipeline syncs odds from _[The Odds API](https://the-odds-api.com/)_ into local models to stay under rate limits.
 
