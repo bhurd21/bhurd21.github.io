@@ -47,48 +47,119 @@ title: Home
   </section>
 
   <!-- Quick Links to Social Media -->
-  <section class="text-center mb-4">
+  <section class="text-center mb-4 md:mb-12">
     <h2 class="text-2xl font-semibold mb-2 text-gray-900">Connect With Me</h2>
-    <div class="flex justify-center gap-6">
-      <a
-        href="https://github.com/bhurd21"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="px-6 py-3 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors"
-      >
-        GitHub
-      </a>
-      <a
-        href="https://www.linkedin.com/in/hurd-brennan/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="px-6 py-3 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors"
-      >
-        LinkedIn
-      </a>
-      <a
-        href="mailto:brennanhurd@gmail.com"
-        class="px-6 py-3 bg-gray-900 text-white rounded hover:bg-gray-700 transition-colors"
-      >
-        Email
-      </a>
+    <div class="flex flex-wrap justify-center gap-4">
+      <!-- GitHub -->
+      <div class="inline-flex rounded overflow-hidden">
+        <a
+          href="https://github.com/bhurd21"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-6 py-3 bg-gray-900 text-white hover:bg-gray-700 transition-colors"
+        >
+          GitHub
+        </a>
+        <button
+          type="button"
+          onclick="copyToClipboard('https://github.com/bhurd21', this)"
+          class="hidden md:block px-3 py-3 bg-white border border-l-0 border-gray-900 text-gray-900 hover:bg-gray-100 transition-colors rounded-r"
+          title="Copy GitHub URL"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <!-- LinkedIn -->
+      <div class="inline-flex rounded overflow-hidden">
+        <a
+          href="https://www.linkedin.com/in/hurd-brennan/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-6 py-3 bg-gray-900 text-white hover:bg-gray-700 transition-colors"
+        >
+          LinkedIn
+        </a>
+        <button
+          type="button"
+          onclick="
+            copyToClipboard('https://www.linkedin.com/in/hurd-brennan/', this)
+          "
+          class="hidden md:block px-3 py-3 bg-white border border-l-0 border-gray-900 text-gray-900 hover:bg-gray-100 transition-colors rounded-r"
+          title="Copy LinkedIn URL"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Email -->
+      <div class="inline-flex rounded overflow-hidden">
+        <a
+          href="mailto:brennanhurd@gmail.com"
+          class="px-6 py-3 bg-gray-900 text-white hover:bg-gray-700 transition-colors"
+        >
+          Email
+        </a>
+        <button
+          type="button"
+          onclick="copyToClipboard('brennanhurd@gmail.com', this)"
+          class="hidden md:block px-3 py-3 bg-white border border-l-0 border-gray-900 text-gray-900 hover:bg-gray-100 transition-colors rounded-r"
+          title="Copy email address"
+        >
+          <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+            ></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </section>
 
   <!-- Call to Action -->
-  <section class="text-center mb-4">
+  <!-- <section class="text-center mb-4">
     <a
       href="{{ '/pages/projects' | relative_url }}"
       class="inline-block px-8 py-3 border-2 border-gray-900 text-gray-900 rounded hover:bg-gray-900 hover:text-white transition-colors"
     >
       View My Projects
     </a>
-  </section>
+  </section> -->
 
   <!-- Photos -->
   <section class="mb-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div>
+      <div class="w-2/3 mx-auto md:w-full">
         <div
           class="aspect-square bg-gray-100 rounded-xl overflow-hidden shadow-lg"
         >
@@ -99,11 +170,10 @@ title: Home
           />
         </div>
         <p class="mt-3 text-sm text-gray-600 text-center font-medium">
-          I write code to help the people who decide what names go on the
-          scoreboard
+          My code helps to decide who shows up here
         </p>
       </div>
-      <div>
+      <div class="w-2/3 mx-auto md:w-full">
         <div
           class="aspect-square bg-gray-100 rounded-xl overflow-hidden shadow-lg border border-gray-300"
         >
@@ -120,3 +190,49 @@ title: Home
     </div>
   </section>
 </div>
+
+<script>
+  function copyToClipboard(text, button) {
+    const originalSvg = button.innerHTML;
+    const successSvg =
+      '<svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+    const errorSvg =
+      '<svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>';
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard
+        .writeText(text)
+        .then(() => showFeedback(button, successSvg, originalSvg))
+        .catch(() =>
+          fallbackCopy(text, button, successSvg, errorSvg, originalSvg),
+        );
+    } else {
+      fallbackCopy(text, button, successSvg, errorSvg, originalSvg);
+    }
+  }
+
+  function fallbackCopy(text, button, successSvg, errorSvg, originalSvg) {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    textArea.style.position = "fixed";
+    textArea.style.left = "-9999px";
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    try {
+      const success = document.execCommand("copy");
+      showFeedback(button, success ? successSvg : errorSvg, originalSvg);
+    } catch (err) {
+      showFeedback(button, errorSvg, originalSvg);
+    }
+
+    document.body.removeChild(textArea);
+  }
+
+  function showFeedback(button, feedbackSvg, originalSvg) {
+    button.innerHTML = feedbackSvg;
+    setTimeout(() => {
+      button.innerHTML = originalSvg;
+    }, 1500);
+  }
+</script>
