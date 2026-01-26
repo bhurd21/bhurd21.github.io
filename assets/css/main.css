@@ -4,3 +4,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .prose {
+    @apply text-gray-800 leading-relaxed;
+  }
+  .prose p {
+    @apply mb-6;
+  }
+  .prose h3 {
+    @apply text-xl font-semibold text-gray-900 mt-8 mb-4;
+  }
+  .prose strong {
+    @apply font-semibold text-gray-900;
+  }
+  .prose em {
+    @apply italic;
+  }
+  .prose ul {
+    @apply list-disc pl-6 mb-6 space-y-2;
+  }
+  .prose li {
+    @apply text-gray-700;
+  }
+  .prose a {
+    @apply text-blue-600 hover:text-blue-800 underline;
+  }
+  .prose-lg {
+    @apply text-lg;
+  }
+}
