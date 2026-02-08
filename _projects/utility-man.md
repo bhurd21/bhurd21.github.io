@@ -7,11 +7,11 @@ chrome_extension: https://chromewebstore.google.com/detail/utility-man/odpgppmid
 date: 2024-01-15
 ---
 
-I am notoriously bad at **[Immaculate Grid](https://www.sports-reference.com/immaculate-grid/)**. My brain just isn't wired to recall obscure players on command. However, my brain _is_ wired to build tools that can help me out.
+I am really bad at **[Immaculate Grid](https://www.sports-reference.com/immaculate-grid/)**. My brain just isn't wired to recall obscure players on command. However, my brain _is_ wired to build tools that can help me out.
 
 ### The Data Challenge
 
-Baseball data is notoriously difficult to access; most of the "good stuff" is hidden behind expensive subscriptions. The **[Lahman Database](https://sabr.org/lahman-database/)** stands out as a premier free resource, offering incredible depth and longevity. With records dating back to the 1800s, it not only provides the schema to solve around **75%** of all Immaculate Grid questions, but just as important, it contains enough raw data to generate multiple results per cell.
+Accessing baseball data can be challenging, as much of the most valuable information is locked behind costly, enterprise-level subscriptions. The **[Lahman Database](https://sabr.org/lahman-database/)** stands out as a premier free resource, offering incredible depth and longevity. With records dating back to the 1800s, it not only provides the schema to solve around **75%** of all Immaculate Grid questions, but just as important, it contains enough raw data to generate multiple results per cell.
 
 ### Mapping the Grid
 
