@@ -8,16 +8,16 @@ title: Home
   <section class="text-center mb-4">
     <p class="text-sm md:text-xl text-gray-600 max-w-6xl mx-auto text-left">
       I graduated from Duke University in 2024 with a B.S. in Computer Science
-      and Math. Throughout my time in Durham, I worked in data analytics for
-      both the Durham Bulls and the Duke Field Hockey team.
+      and Math. Along the way I got my start in data analytics with the Durham
+      Bulls and Duke Athletics.
     </p>
     <!-- Logo Row -->
     <section class="my-4">
       <div class="flex items-center justify-center gap-6">
         <img
-          src="{{ '/assets/images/dukeu-athletics-logo.jpeg' | relative_url }}"
-          alt="Duke University Athletics"
-          class="h-10 w-10 md:h-12 md:w-12 object-contain"
+          src="{{ '/assets/images/washington-nationals-logo.png' | relative_url }}"
+          alt="Washington Nationals"
+          class="h-10 w-10 md:h-12 md:w-12 object-contain scale-[1.18]"
         />
         <div class="h-6 md:h-8 w-px bg-gray-300"></div>
         <img
@@ -27,8 +27,8 @@ title: Home
         />
         <div class="h-6 md:h-8 w-px bg-gray-300"></div>
         <img
-          src="{{ '/assets/images/washington-nationals-logo.jpeg' | relative_url }}"
-          alt="Washington Nationals"
+          src="{{ '/assets/images/dukeu-athletics-logo.jpeg' | relative_url }}"
+          alt="Duke University Athletics"
           class="h-10 w-10 md:h-12 md:w-12 object-contain"
         />
       </div>
@@ -182,9 +182,13 @@ title: Home
       </figcaption>
       <div class="rounded-xl overflow-hidden shadow-lg bg-gray-100">
         <img
+          id="home-gif"
           src="{{ '/assets/images/cj-abrams-safe-at-home.gif' | relative_url }}"
+          data-gif-src="{{ '/assets/images/cj-abrams-safe-at-home.gif' | relative_url }}"
           alt="CJ Abrams sliding into home plate, called safe by the umpire"
-          class="w-full h-auto"
+          class="w-full h-auto cursor-pointer"
+          onclick="toggleGif(this)"
+          title="Click to stop the GIF"
         />
       </div>
     </figure>
@@ -273,5 +277,23 @@ title: Home
     setTimeout(() => {
       button.innerHTML = originalSvg;
     }, 1500);
+  }
+
+  function toggleGif(img) {
+    if (img.dataset.paused === "true") {
+      // Resume: reload the GIF (restarts from the first frame).
+      img.src = img.dataset.gifSrc;
+      img.dataset.paused = "false";
+      img.title = "Click to stop the GIF";
+      return;
+    }
+    // Pause: snapshot the current frame onto a canvas and display that.
+    const canvas = document.createElement("canvas");
+    canvas.width = img.naturalWidth;
+    canvas.height = img.naturalHeight;
+    canvas.getContext("2d").drawImage(img, 0, 0);
+    img.src = canvas.toDataURL("image/png");
+    img.dataset.paused = "true";
+    img.title = "Click to play the GIF";
   }
 </script>

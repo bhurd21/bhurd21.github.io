@@ -4,9 +4,9 @@ title: Projects
 permalink: /pages/projects/
 ---
 
-<div class="max-w-6xl mx-auto px-4 py-12">
-  <h1 class="text-4xl font-bold mb-8 text-gray-900">Projects</h1>
-  <p class="text-lg text-gray-600 mb-12">
+<div class="max-w-6xl mx-auto px-6 pt-3 pb-6">
+  <h2 class="text-3xl font-bold mb-2 text-gray-900">Projects</h2>
+  <p class="text-md text-gray-600 mb-6">
     Here are some of the projects I've worked on. Click "Read More" to learn
     about each one in detail.
   </p>
@@ -15,7 +15,7 @@ permalink: /pages/projects/
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {% for project in site.projects %}
     <article
-      class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full relative"
+      class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow flex flex-col h-full relative"
     >
       <!-- Project Image -->
       {% if project.image %}
@@ -31,13 +31,13 @@ permalink: /pages/projects/
       {% endif %}
 
       <!-- Project Content -->
-      <div class="p-6 flex flex-col flex-grow">
+      <div class="p-3 flex flex-col flex-grow">
         <h2 class="text-xl font-semibold mb-2 text-gray-900">
           {{ project.title }}
         </h2>
 
         {% if project.description %}
-        <p class="text-gray-600 mb-4 flex-grow">{{ project.description }}</p>
+        <p class="text-gray-600 mb-3 flex-grow">{{ project.description }}</p>
         {% endif %}
 
         <div class="flex justify-between items-center mt-auto">
